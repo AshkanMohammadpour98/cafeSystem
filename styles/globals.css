@@ -1,42 +1,129 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+    font-family: 'IranianSans';
+    src: url('/fonts/Iranian\ Sans.ttf');
+}
+@font-face {
+    font-family: 'yekan';
+    src: url('/fonts/Yekan.ttf');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+/* ریسپانسیو کردن متن هایی که برای عنوان ازشون استفاده میکنم */
+.responsive-heading {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+@media (min-width: 576px) {
+  .responsive-heading {
+    font-size: 24px;
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+@media (min-width: 768px) {
+  .responsive-heading {
+    font-size: 28px;
+  }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@media (min-width: 992px) {
+  .responsive-heading {
+    font-size: 32px;
+  }
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@media (min-width: 1200px) {
+  .responsive-heading {
+    font-size: 36px;
+  }
 }
+
+
+/* ریسپانسیو کردن متن ها */
+.responsive-text {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (min-width: 576px) {
+  .responsive-text {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive-text {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  .responsive-text {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .responsive-text {
+    font-size: 20px;
+  }
+}
+
+
+
+:root {
+  --color-primary: #e7be99;     /* رنگ اصلی (کرم قهوه‌ای) */
+  --color-bg-light: #fefaf6;    /* پس‌زمینه روشن */
+  --color-bg-dark: #8d6e63;     /* پس‌زمینه تیره */
+  --color-text: #5c4634;        /* رنگ متن اصلی */
+  --color-accent-1: #d6a77a;    /* رنگ مکمل ۱ */
+  --color-accent-2: #4e342e;    /* رنگ مکمل ۲ (شکلاتی تیره) */
+  --color-decor: #f6d6c3;       /* رنگ تزئینی (صورتی لطیف) */
+}
+/* مثلا backgroundColor: 'var(--color-primary)' */
+
+/* background animaion */
+
+    .background--custom {
+      background: linear-gradient(90deg, #4688b4, #e7bd99);
+      background-size: 300% 300%;
+      animation: gradient 4s alternate infinite;
+      /* position: absolute; */
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+    @keyframes gradient {
+      0% {
+        background-position: 0%;
+      }
+      100% {
+        background-position: 100%;
+      }
+    }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    list-style-type: none;
+    text-decoration: none;
 }
+body{
+    font-family: 'IranianSans';  
+    background-color: var(--color-bg-light);
+}
+h1 , h2 {
+    font-family: 'yekan';
+}
+.titleYekan{
+    font-family: 'yekan';
+}
+.bg-hover:hover{
+    transition: all ease-in-out 0.5;
+    background-color: #0b5ed7;
+}
+.bg-hover{
+    background-color: #007bff;
+    color: #ffff;
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }

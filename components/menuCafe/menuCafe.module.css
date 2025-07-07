@@ -1,0 +1,17 @@
+
+@media (min-width: 992px) {
+  .modaldialogright {
+    position: fixed !important;
+    right: 10vw;
+    margin: 0;
+    height: 100vh;
+    top: 17%;
+    transform: none !important;
+    max-width: 400px; 
+  }
+
+  .modal-content {
+    height: 100%;
+    border-radius: 0;
+  }
+}
