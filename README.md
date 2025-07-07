@@ -1,40 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# سیستم ثبت سفارش کافه (Next.js + JSON Server)
 
-## Getting Started
+این پروژه یک سیستم ساده برای ثبت و مدیریت سفارش‌های کافه است که با **Next.js** ساخته شده و از **JSON Server** به عنوان دیتابیس استفاده می‌کند. این برنامه در حالت **لوکال** اجرا می‌شود و برای استفاده در یک کافه کوچک طراحی شده است.
 
-First, run the development server:
+## ویژگی‌ها
+
+- ثبت سفارش برای سالن و بیرون‌بر
+- افزودن دسته‌بندی و زیرمنو
+- محاسبه مجموع سفارش‌ها
+- مقایسه فروش امروز با دیروز
+- امکان ویرایش منو و دسته‌بندی‌ها
+- اجرا فقط در یک سیستم (بدون نیاز به هاست یا اینترنت)
+
+---
+
+## پیش‌نیازها
+
+روی سیستمی که برنامه اجرا خواهد شد، باید موارد زیر نصب باشند:
+
+- [Node.js](https://nodejs.org) (ورژن ۱۸ یا بالاتر پیشنهاد می‌شود)
+- npm (همراه با Node.js نصب می‌شود)
+
+---
+
+## مراحل اجرا
+
+۱. پوشه پروژه را به مسیر دلخواه در سیستم منتقل کنید.  
+۲. فایل `start.bat` را اجرا کنید (با دوبار کلیک).  
+   این فایل به صورت خودکار:
+   - JSON Server را راه‌اندازی می‌کند.
+   - پروژه Next.js را با دستور `npm run dev` اجرا می‌کند.
+   - مرورگر را باز می‌کند و به آدرس `http://localhost:3000` هدایت می‌کند.
+
+---
+
+## اگر فایل `start.bat` اجرا نشد
+
+در صورتی که فایل `.bat` کار نکند، می‌توانید مراحل زیر را به صورت دستی در **ترمینال ویندوز** (CMD) اجرا کنید:
 
 ```bash
+npm install
+npm run json-server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
